@@ -14,17 +14,23 @@ function mergeSort(array) {
   return merge(mergeSort(slice1), mergeSort(slice2));
 }
 
-// console.log(mergeSort([0, 1, 2, 5]));
+console.log(mergeSort([0, 1, 2, 5]));
 
 // Consider both are sorted
 // FAILED HERE, STUDY HERE!!!
-function merge(array1, array2) {
+function merge(left, right) {
   let newArray = [];
 
-  for (let i = 0; i < array1.length; i++) {}
+  while (left.length && right.length) {
+    if (left[0] <= right[0]) {
+      //                 shift - Remove the item from the front of the array
+      newArray.push(left.shift());
+    } else {
+      newArray.push(right.shift());
+    }
+  }
 
-  console.log(newArray);
-  return newArray;
+  return newArray.concat(left, right);
 }
 
-merge([0, 1], [2, 5]);
+// console.log(merge([0, 1], [2, 5]));
