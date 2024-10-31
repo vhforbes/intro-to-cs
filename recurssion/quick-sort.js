@@ -19,4 +19,4 @@ function quickSort(array) {
   return [].concat(quickSort(left), pivot, quickSort(right));
 }
 
-console.log(quickSort([4, 9, 3, 5]));
+console.log(quickSort([4, 9, 3, 5, 7, 1]));
