@@ -52,6 +52,7 @@ class linkedList {
       } else {
         // Kills the array
         this.head = null;
+        this.tail = null;
       }
 
       this.length--;
